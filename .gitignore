@@ -1,0 +1,7 @@
+/build
+/.clang
+/.codelite
+/.vscode
+/NitroNet.project
+/NitroNet.workspace
+/postbuild.sh
