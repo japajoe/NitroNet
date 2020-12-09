@@ -15,26 +15,26 @@ double error = 1;
 
 int main()
 {
-    layerSizes.push_back(3);
+	layerSizes.push_back(3);
 	layerSizes.push_back(4);
 	layerSizes.push_back(4);
 	layerSizes.push_back(2);	
-	
+
 	transferFunctions.push_back(TransferFunction::NONE);
 	transferFunctions.push_back(TransferFunction::TANH);
 	transferFunctions.push_back(TransferFunction::TANH);
 	transferFunctions.push_back(TransferFunction::TANH);
-	
+
 	network = BackpropagationNetwork(layerSizes, transferFunctions);
-	
+
 	input.push_back(0);
 	input.push_back(1);
 	input.push_back(1);
-	
+
 	desired.push_back(1);
 	desired.push_back(1);
 
-    while(error > 0.001)
+	while(error > 0.001)
 	{
 		network.feedForward(input);
 		network.getResults(results);
@@ -42,7 +42,7 @@ int main()
 		error = network.getRecentAverageError();
 	}
 
-    std::cout << "Learning error: " << error << std::endl;
+	std::cout << "Learning error: " << error << std::endl;
 
 	return 0;
 }
