@@ -1,0 +1,2 @@
+# NitroNet
+Backpropagation neural network
